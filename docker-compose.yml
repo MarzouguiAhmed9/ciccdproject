@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    image:  e43e538ba391                    # Use the pre-built Docker image named 'nginxx'
+    ports:
+      - "8086:80"                          # Map port 80 in the container to port 8080 on your host
+    volumes:
+      - my-html-volume:/usr/share/nginx/html  # Mount the volume to persist HTML files
+    networks:
+      - my-custom-network                  # Connect to a custom network
+
+# Define volumes
+volumes:
+  my-html-volume:                          # Named volume for persisting data
+
+# Define networks
+networks:
+  my-custom-network:                       # Custom network for container communication
