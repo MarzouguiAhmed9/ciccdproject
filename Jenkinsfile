@@ -26,7 +26,7 @@ pipeline {
 
 
 
-                    sh 'docker run -d --name my-html-app222 -p 8099:80 marzouguiAhmed9/cicd2:latest'
+                    sh 'docker run -d --name my-html-app222 -p 8022:80 marzouguiAhmed9/cicd2:latest'
                 }
             }
         }
